@@ -1,0 +1,165 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 32px;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px 0 #90caf9;
+    overflow: hidden;
+    border-left: 12px solid #1976d2;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    background: #e3f2fd;
+    box-shadow: 0 12px 40px 0 #1976d2;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.card-content {
+    padding: 32px 32px 32px 24px;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    max-width: 70%;
+}
+
+.card-content h3 {
+    font-size: 1.6rem;
+    color: #1976d2;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.card-content p {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.descricao {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.texto-descricao {
+    width: 100%;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+}
+
+/* Modal */
+.modal-content {
+    padding: 50px;
+    width: 100%;
+    color: #444;
+}
+
+.ReactModal__Content {
+    display: flex;
+    height: 40%;
+}
+
+.modal-descricao {
+    margin-bottom: 15px;
+}
+
+.modal-localizacao {
+    margin-bottom: 15px;
+}
+
+.modal-content PrimaryButton {
+    margin-bottom: 25px;
+}
+
+/* Adequando a modal para mobile */
+@media only screen and (max-width: 512px) {
+    .modal-content {
+        padding: 0px;
+    }
+
+    .modal-content h2 {
+        font-size: 18px !important;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+    }
+
+    .ReactModal__Content {
+        display: flex;
+        height: 55%;
+    }
+
+    .modal-descricao {
+        margin-bottom: 15px;
+    }
+
+    .modal-localizacao {
+        margin-bottom: 15px;
+    }
+
+    .modal-content PrimaryButton {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width: 512px) and (max-width: 1024px) {
+    .modal-content {
+        padding: 0px;
+    }
+
+    .modal-content h2 {
+        font-size: 22px !important;
+    }
+
+    .ReactModal__Content {
+        display: flex;
+        height: 45%;
+    }
+
+}
+
+.card .primaryButton {
+    align-self: center;
+    margin-right: 32px;
+    min-width: 120px;
+    height: 44px;
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+    }
+    .card-content {
+        padding: 24px 16px 8px 16px;
+        max-width: 100%;
+    }
+    .card .primaryButton {
+        margin: 0 0 24px 0;
+        width: 100%;
+        min-width: unset;
+        align-self: stretch;
+    }
+}

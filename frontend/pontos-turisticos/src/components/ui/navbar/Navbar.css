@@ -1,0 +1,130 @@
+:root {
+    --primaryColor: #1976d2;
+    --secondaryColor: #fff;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 0;
+    background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 24px 0 #90caf9;
+    position: sticky;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+.logo {
+    font-size: 32px;
+    color: var(--secondaryColor);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 16px 0 8px 0;
+    box-shadow: 0 2px 8px 0 #bbdefb;
+    object-fit: cover;
+    background: #fff;
+    border: 3px solid #fff;
+}
+
+/* Itens do menu */
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 12px;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s, border-bottom 0.2s;
+    padding: 8px 0;
+    border-bottom: 2.5px solid transparent;
+}
+
+.navBar a.active, .navBar a:hover {
+    color: #bbdefb;
+    border-bottom: 2.5px solid #bbdefb;
+}
+
+.nav-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--secondaryColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+/* Adequando o menu para mobile */
+@media only screen and (max-width: 1024px) {
+
+    .nav-btn {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-open-btn {
+        transition: opacity .5s ease;
+    }
+
+    .navBar.responsive-nav~.nav-open-btn {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--primaryColor);
+        transition: .5s;
+        transform: translateY(-100vh);
+    }
+
+    .responsive-nav {
+        transform: none;
+    }
+
+    .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .navBar a {
+        font-size: 1.5rem;
+        margin-left: 0px;
+    }
+}

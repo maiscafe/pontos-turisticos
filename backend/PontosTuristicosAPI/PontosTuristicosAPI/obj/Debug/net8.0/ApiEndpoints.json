@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "PontosTuristicosAPI.Controllers.PontosTuristicosController",
+    "Method": "CadastrarPontoTuristico",
+    "RelativePath": "api/v1/PontosTuristicos/cadastrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pontoTuristicoDto",
+        "Type": "PontosTuristicosAPI.DTOs.PontoTuristicoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PontosTuristicosAPI.Controllers.PontosTuristicosController",
+    "Method": "GetPontosTuristicos",
+    "RelativePath": "api/v1/PontosTuristicos/lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PontosTuristicosAPI.Controllers.PontosTuristicosController",
+    "Method": "Ping",
+    "RelativePath": "api/v1/PontosTuristicos/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PontosTuristicosAPI.Controllers.PontosTuristicosController",
+    "Method": "GetPontoTuristicoById",
+    "RelativePath": "api/v1/PontosTuristicos/ponto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

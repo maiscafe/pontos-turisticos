@@ -1,0 +1,37 @@
+:root {
+    --primaryColor: #1976d2;
+    --secondaryColor: #fff;
+}
+
+.secondaryButton {
+    background: #fff;
+    color: #1976d2;
+    padding: 14px 36px;
+    border-radius: 999px;
+    border: 2px solid #1976d2;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 16px 0 #bbdefb;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s, color 0.2s;
+    outline: none;
+}
+
+.secondaryButton:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px 0 #1976d2;
+}
+
+.secondaryButton:hover {
+    background: #e3f2fd;
+    color: #1565c0;
+    box-shadow: 0 8px 24px 0 #1976d2;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.secondaryButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: none;
+}

@@ -1,0 +1,44 @@
+:root {
+    --primaryColor: #1976d2;
+    --secondaryColor: #fff;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.required-label {
+    color: red;
+    font-size: small;
+    margin-left: 12px;
+}
+
+.input {
+    border-radius: 999px;
+    padding: 14px 22px;
+    line-height: 30px;
+    border: 2px solid #bbdefb;
+    color: #1976d2;
+    font-weight: 600;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 8px 0 #e3f2fd;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    background: #f7fbff;
+}
+
+.input:disabled {
+    background-color: #f3f3f3;
+}
+
+.input:required {
+    border: 2px solid var(--primaryColor);
+}
+
+.input:focus {
+    border: 2.5px solid #1976d2;
+    outline: none;
+    box-shadow: 0 4px 16px 0 #90caf9;
+    background: #e3f2fd;
+}
